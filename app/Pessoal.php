@@ -15,7 +15,6 @@ class Pessoal extends Model
     protected $fillable = ['nome','nome_guerra', 'posto_graduacao', 'om_id'];
 
     public function om(){
-        //uma pessoa pertence a 1 OM, e uma OM pode ter várias pessoas
         return $this->belongsTo('App\Om','om_id','id');
     }
 
